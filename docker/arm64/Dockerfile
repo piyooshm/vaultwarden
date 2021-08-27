@@ -16,13 +16,13 @@
 # - From the command line:
 #     $ docker pull vaultwarden/web-vault:v2.21.1
 #     $ docker image inspect --format "{{.RepoDigests}}" vaultwarden/web-vault:v2.21.1
-#     [vaultwarden/web-vault@sha256:29a4fa7bf3790fff9d908b02ac5a154913491f4bf30c95b87b06d8cf1c5516b5]
+#     [mukhija/web-vault@sha256:13fdbffd2fb04fd497b6ac33139553a7fcc04a4ae877aaf1d7950c8bb7094d36]
 #
 # - Conversely, to get the tag name from the digest:
-#     $ docker image inspect --format "{{.RepoTags}}" vaultwarden/web-vault@sha256:29a4fa7bf3790fff9d908b02ac5a154913491f4bf30c95b87b06d8cf1c5516b5
+#     $ docker image inspect --format "{{.RepoTags}}" mukhija/web-vault@sha256:13fdbffd2fb04fd497b6ac33139553a7fcc04a4ae877aaf1d7950c8bb7094d36
 #     [vaultwarden/web-vault:v2.21.1]
 #
-FROM vaultwarden/web-vault@sha256:29a4fa7bf3790fff9d908b02ac5a154913491f4bf30c95b87b06d8cf1c5516b5 as vault
+FROM mukhija/web-vault@sha256:29a4fa7bf3790fff9d908b02ac5a154913491f4bf30c95b87b06d8cf1c5516b5 as vault
 
 ########################## BUILD IMAGE  ##########################
 FROM rust:1.54 as build
